@@ -4,7 +4,7 @@ import time                         #時間制御用のモジュールをイン�
 
 #ポート番号の定義
 Led_red_pin = 25                         #変数"Led_red_pin"に25を格納
-Led_blue_pin = 23                      #変数"Led_yellow_pin"に23を格納
+Led_blue_pin = 17                      #変数"Led_yellow_pin"に23を格納
 Led_green_pin = 18                       #変数"Led_green_pin"に18を格納
 
 #GPIOの設定
