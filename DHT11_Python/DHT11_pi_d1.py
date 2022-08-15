@@ -14,12 +14,15 @@ try:
 	while True:
 	    result = instance.read()
 	    #if result.is_valid():
+        #od = "Temperature: %-3.1f C" % result.temperature
+        #hm = "%-3.1f %%" % result.humidity
 	    print("Last valid input: " + str(datetime.datetime.now()))
-
 	    print("Temperature: %-3.1f C" % result.temperature)
+        #print(od)
 	    print("Humidity: %-3.1f %%" % result.humidity)
-
-	    time.sleep(6)
+        #print("Humidity: %d %%" % hm)
+        #Client.publish(Topic, )
+	    time.sleep(3)
 
 except KeyboardInterrupt:
     print("Cleanup")
