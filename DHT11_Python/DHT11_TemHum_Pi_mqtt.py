@@ -8,7 +8,7 @@ import paho.mqtt.client as mqtt
 
 ###### Edit variables to your environment #######
 broker_address = "test.mosquitto.org"     #MQTT broker_address :192.168.0.31
-Topic = "piper-jp"
+Topic = "sugi3pitest"
 
 # initialize GPIO
 GPIO.setwarnings(True)
@@ -31,7 +31,8 @@ try:
         print("Last valid input: " + str(datetime.datetime.now()))
         print("Temperature: %-3.1f C" % result.temperature)
         print("Humidity: %-3.1f %%" % result.humidity)
-        #Client.publish(Topic, result.temperature, result.humidity)
+        #client.publish(Topic, result.temperature)
+        client.publish(Topic, result.humidity)
         time.sleep(3)
 
 except KeyboardInterrupt:
